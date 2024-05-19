@@ -57,7 +57,7 @@ h2 {
     transition: background-color 0.3s;
 }
 /* Hover effect for the login button */
-.login-button:hover {
+.login-btn:hover {
     background-color: #0056b3;
 }
 /* Apply style to hover text */

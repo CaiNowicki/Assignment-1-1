@@ -3,7 +3,7 @@ var loginButton = document.getElementById('loginButton');
 var hoverText = document.getElementById('hoverText');
 
 // Add event listener for mouseover event on the login button
-loginButton.addEventListener('mousehover', function() {
+loginButton.addEventListener('mouseover', function() {
     // Display the hover text when the mouse is over the button
     hoverText.style.display = 'block';
 });
