@@ -98,26 +98,3 @@ h3 {
     margin: 0;
     padding: 0;
 }
-
-/* Tooltip text  - to show alt text on hover*/
-.resized-image::after {
-    content: attr(alt);           /* Use the alt attribute as content */
-    position: absolute;           /* Position the tooltip */
-    bottom: 110%;                 /* Position the tooltip above the image */
-    left: 50%;                    /* Center the tooltip horizontally */
-    transform: translateX(-50%);  /* Center the tooltip */
-    background-color: #333;       /* Background color for the tooltip */
-    color: #fff;                  /* Text color */
-    padding: 5px;                 /* Padding for better readability */
-    border-radius: 5px;           /* Rounded corners */
-    white-space: nowrap;          /* Prevent text from wrapping */
-    opacity: 0;                   /* Start with the tooltip hidden */
-    visibility: hidden;           /* Ensure the tooltip is hidden */
-    transition: opacity 0.3s;     /* Smooth transition for the tooltip */
-}
-
-/* Show tooltip on hover */
-.resized-image:hover::after {
-    opacity: 1;                   /* Show the tooltip */
-    visibility: visible;          /* Ensure the tooltip is visible */
-}
