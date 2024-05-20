@@ -33,13 +33,22 @@ section {
     margin-bottom: 2rem; /* 2rem creates a consistent spacing between sections */
 }
 
-/* Apply styles to all h2 elements */
+/* Apply styles to all h2 and h3 elements */
 h2 {
     /* Add a bottom border to h2 elements to separate them from the content below */
     border-bottom: 2px solid #ccc; /* 2px solid border with a light gray color */
     /* Add padding below the h2 element to create space between the text and the border */
     padding-bottom: 0.5rem; /* 0.5rem adds a smaller space compared to other padding values */
+    text-align: center; /* Centers the text on the page */
 }
+
+h3 {
+    font-weight: bold;
+    color: #333;
+    padding: 0.5rem;
+    text-align: left;
+}
+
 /* Container to center the button */
 .container {
     text-align: center;
