@@ -8,6 +8,8 @@ body {
     padding: 0;
     /* set the background color for the page */
     background-color: #a2ccf1;
+    /* set text alignment for all text not otherwise specified */
+    text-align: center;
 }
 /* Apply styles to the header element */
 header {
@@ -46,7 +48,7 @@ h3 {
     font-weight: bold;
     color: #333;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 /* Container to center the button */
@@ -78,8 +80,17 @@ h3 {
     font-size: 14px;
 }
 
+/* Styles for the container to center the image */
+.image-container {
+    display: flex;                /* Use flexbox for centering */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    height: 100vh;                /* Set container height to full viewport height for vertical centering */
+}
+
+/* Styles for the resized image */
 .resized-image {
-    width: 300px;
-    height: auto; /* this maintains the aspect ratio */
-    align-items: center;
+    width: 50%;                   /* Set the desired width */
+    max-width: 300px;             /* Set a maximum width */
+    height: auto;                 /* Maintain aspect ratio */
 }
