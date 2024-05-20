@@ -78,7 +78,7 @@ h3 {
     font-size: 14px;
 }
 
-.resized_image {
+.resized-image {
     width: 300px;
     height: auto; /* this maintains the aspect ratio */
 }
