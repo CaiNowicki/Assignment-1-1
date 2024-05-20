@@ -73,8 +73,7 @@ h3 {
 }
 /* Apply style to hover text */
 .hover-text {
-    /* Initially hide the hover text */
-    display: none;
+    display: none;              /* Initially hide the hover text */
     margin-top: 10px;
     color: #333;
     font-size: 14px;
@@ -82,15 +81,43 @@ h3 {
 
 /* Styles for the container to center the image */
 .image-container {
+    position: relative;             /* positions the tooltip */
     display: flex;                /* Use flexbox for centering */
     justify-content: center;      /* Center horizontally */
     align-items: center;          /* Center vertically */
-    height: 100vh;                /* Set container height to full viewport height for vertical centering */
+    height: auto;                /* Set container height to full viewport height for vertical centering */
+
 }
 
 /* Styles for the resized image */
 .resized-image {
-    width: 50%;                   /* Set the desired width */
+    width: auto;                   /* Set the desired width */
     max-width: 300px;             /* Set a maximum width */
     height: auto;                 /* Maintain aspect ratio */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tooltip text  - to show alt text on hover*/
+.resized-image::after {
+    content: attr(alt);           /* Use the alt attribute as content */
+    position: absolute;           /* Position the tooltip */
+    bottom: 110%;                 /* Position the tooltip above the image */
+    left: 50%;                    /* Center the tooltip horizontally */
+    transform: translateX(-50%);  /* Center the tooltip */
+    background-color: #333;       /* Background color for the tooltip */
+    color: #fff;                  /* Text color */
+    padding: 5px;                 /* Padding for better readability */
+    border-radius: 5px;           /* Rounded corners */
+    white-space: nowrap;          /* Prevent text from wrapping */
+    opacity: 0;                   /* Start with the tooltip hidden */
+    visibility: hidden;           /* Ensure the tooltip is hidden */
+    transition: opacity 0.3s;     /* Smooth transition for the tooltip */
+}
+
+/* Show tooltip on hover */
+.resized-image:hover::after {
+    opacity: 1;                   /* Show the tooltip */
+    visibility: visible;          /* Ensure the tooltip is visible */
 }
