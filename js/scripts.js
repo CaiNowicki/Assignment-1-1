@@ -24,7 +24,7 @@ images.forEach(function(image) {
         // if yes, get alt text
         var altText = event.target.alt || 'No Image ID available'; //fetch alt text or use default
         hoverText.textContent = altText;
-        hoverText.style.display = 'block';
+        hoverText.style.display = 'inline';
     }
 );
 // check for mouseout on each image
