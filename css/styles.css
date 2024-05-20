@@ -81,4 +81,5 @@ h3 {
 .resized-image {
     width: 300px;
     height: auto; /* this maintains the aspect ratio */
+    align-items: center;
 }
